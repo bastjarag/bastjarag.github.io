@@ -31,7 +31,7 @@
         </div>
     </div>
 </nav>
-
+<!---
 <div class="container mt-5 pt-5">
     <h1>Contacto</h1>
     <p>Para cualquier consulta profesional, no dudes en contactarme a través del siguiente formulario.</p>
@@ -47,10 +47,24 @@
     Your message:
     <textarea name="message"></textarea>
   </label>
-  <!-- your other form fields go here -->
+  
   <button type="submit">Send</button>
 </form>
 </div>
+---->
+<p>Para cualquier consulta profesional, no dudes en contactarme a través del siguiente formulario.</p>
+<form action="https://formspree.io/f/mgegkjwy" method="POST">
+    <div class="form-group">
+        <label for="email">Tu email:</label>
+        <input type="email" name="email" class="form-control" placeholder="Tu dirección de email">
+    </div>
+    <div class="form-group">
+        <label for="message">Tu mensaje:</label>
+        <textarea name="message" class="form-control" rows="3" placeholder="Escribe tu mensaje aquí"></textarea>
+    </div>
+    <!-- Aquí puedes agregar más campos si lo necesitas -->
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
 
 <footer class="footer bg-dark text-white mt-4">
     <div class="container text-center py-3">
