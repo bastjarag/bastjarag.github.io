@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación - [Nombre del Ingeniero]</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhckVA1K3Xu1pyROdr3d093e89i+bN4iRD5/wKG4j57drxn7s625fd3W6q9Ah" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>[Nombre del Ingeniero]</h1>
+      <p>Ingeniero Informático</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-me">
+      <div class="container">
+        <h2>Sobre mí</h2>
+        <p>
+          [Escribe una breve descripción sobre ti, tu experiencia y habilidades.]
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <div class="container">
+        <h2>Portafolio</h2>
+        <p>
+          [Explica brevemente cómo usar la carpeta con imágenes.]
+        </p>
+        <div class="row">
+          <script>
+            const imgDir = "img";
+            const imgList = document.getElementById("img-list");
+
+            fetch(imgDir)
+              .then(response => response.json())
+              .then(data => {
+                data.forEach(file => {
+                  const imgElement = document.createElement("img");
+                  imgElement.classList.add("col-md-4", "col-sm-6", "mb-4");
+                  imgElement.src = `${imgDir}/${file}`;
+                  imgElement.alt = file;
+                  imgList.appendChild(imgElement);
+                });
+              });
+          </script>
+
+          <div id="img-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>
+          [Proporciona información de contacto, como correo electrónico, teléfono o redes sociales.]
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkYQ2D6YfzJ7xznVXOzd4pmz13fC+GMKdF8M8Il5kL09054c+1TWb4W1N" crossorigin="anonymous"></script>
+</body>
+</html>
